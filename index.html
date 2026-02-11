@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript" src="index_files/___vscode_livepreview_injected_script"></script>
+<meta charset="UTF-8">
+<title>Smart 12 Month Scenic Calendar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --gold: #d4af37;
+  --dark: #222;
+  --light: #ffffff;
+  --muted: #777;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f6fa;
+  color: var(--dark);
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.month {
+  background: var(--light);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.month:hover {
+  transform: translateY(-6px);
+}
+
+.month-header {
+  padding: 18px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays div {
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: center;
+  background: #fafafa;
+}
+
+.days div {
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.days div:hover {
+  background: rgba(212,175,55,0.15);
+  cursor: pointer;
+}
+
+.holiday {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.empty {
+  background: transparent;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .month {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Smart 12-Month Scenic Calendar</h1>
+
+<div class="calendar" id="calendar"><div class="month"><div class="month-header" style="background: linear-gradient(rgb(116, 185, 255), rgb(9, 132, 227));">January</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="holiday" title="New Year">1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(255, 118, 117), rgb(214, 48, 49));">February</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(85, 239, 196), rgb(0, 184, 148));">March</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(129, 236, 236), rgb(0, 206, 201));">April</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(255, 234, 167), rgb(253, 203, 110));">May</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(250, 177, 160), rgb(225, 112, 85));">June</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(116, 185, 255), rgb(108, 92, 231));">July</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(253, 203, 110), rgb(232, 67, 147));">August</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div class="holiday" title="Independence Day">15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(225, 112, 85), rgb(214, 48, 49));">September</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(162, 155, 254), rgb(108, 92, 231));">October</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(99, 110, 114), rgb(45, 52, 54));">November</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div></div></div><div class="month"><div class="month-header" style="background: linear-gradient(rgb(0, 184, 148), rgb(9, 132, 227));">December</div><div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="days"><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div class="holiday" title="Christmas">25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div></div></div></div>
+
+<script>
+const months = [
+  { name: "January", bg: "linear-gradient(#74b9ff,#0984e3)", days: 31 },
+  { name: "February", bg: "linear-gradient(#ff7675,#d63031)", days: 28 },
+  { name: "March", bg: "linear-gradient(#55efc4,#00b894)", days: 31 },
+  { name: "April", bg: "linear-gradient(#81ecec,#00cec9)", days: 30 },
+  { name: "May", bg: "linear-gradient(#ffeaa7,#fdcb6e)", days: 31 },
+  { name: "June", bg: "linear-gradient(#fab1a0,#e17055)", days: 30 },
+  { name: "July", bg: "linear-gradient(#74b9ff,#6c5ce7)", days: 31 },
+  { name: "August", bg: "linear-gradient(#fdcb6e,#e84393)", days: 31 },
+  { name: "September", bg: "linear-gradient(#e17055,#d63031)", days: 30 },
+  { name: "October", bg: "linear-gradient(#a29bfe,#6c5ce7)", days: 31 },
+  { name: "November", bg: "linear-gradient(#636e72,#2d3436)", days: 30 },
+  { name: "December", bg: "linear-gradient(#00b894,#0984e3)", days: 31 }
+];
+
+const weekdays = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const calendar = document.getElementById("calendar");
+
+// Example holidays
+const holidays = {
+  "January-1": "New Year",
+  "August-15": "Independence Day",
+  "December-25": "Christmas"
+};
+
+months.forEach((month, index) => {
+  const monthEl = document.createElement("div");
+  monthEl.className = "month";
+
+  const header = document.createElement("div");
+  header.className = "month-header";
+  header.style.background = month.bg;
+  header.textContent = month.name;
+  monthEl.appendChild(header);
+
+  const weekRow = document.createElement("div");
+  weekRow.className = "weekdays";
+  weekdays.forEach(d => {
+    const div = document.createElement("div");
+    div.textContent = d;
+    weekRow.appendChild(div);
+  });
+  monthEl.appendChild(weekRow);
+
+  const daysGrid = document.createElement("div");
+  daysGrid.className = "days";
+
+  const firstDay = new Date(2026, index, 1).getDay();
+
+  for (let i = 0; i < firstDay; i++) {
+    daysGrid.appendChild(document.createElement("div")).className = "empty";
+  }
+
+  for (let d = 1; d <= month.days; d++) {
+    const dayEl = document.createElement("div");
+    const key = `${month.name}-${d}`;
+    dayEl.textContent = d;
+
+    if (holidays[key]) {
+      dayEl.classList.add("holiday");
+      dayEl.title = holidays[key];
+    }
+
+    daysGrid.appendChild(dayEl);
+  }
+
+  monthEl.appendChild(daysGrid);
+  calendar.appendChild(monthEl);
+});
+</script>
+
+
+
+</body></html>
